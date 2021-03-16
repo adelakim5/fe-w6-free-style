@@ -14,11 +14,12 @@ apiRouter.post("/", function (req, res) {
 
   const userRequest = req.body.userRequest;
   const userId = userRequest.user.id;
+  console.log(userId);
   const userAnswer = userRequest.utterance;
-  
+
   if (startUtterances.some((e) => e === userAnswer)) {
-    if (userAnswer === startUtterances || userAnswer === beginningUtterance) users = registerNewUser(users, userId, initScore);
-    if (!users.has(userId)) users = registerNewUser(users, userId, initScore);
+    if (userAnswer === startUtterances || !users.has(userId)) users = registerNewUser(users, userId, initScore);
+    // if (!users.has(userId)) users = registerNewUser(users, userId, initScore);
     // if (userAnswer === startUtterances[0]) users = registerNewUser(users, userId, initScore);
 
     const index = users.get(userId).index;
@@ -30,11 +31,14 @@ apiRouter.post("/", function (req, res) {
       const scoreArr = [userValue["0"].E, userValue["0"].I, userValue["1"].S, userValue["1"].N, userValue["2"].T, userValue["2"].F, userValue["3"].J, userValue["3"].P];
       const scores = scoreArr.reduce((acc, val) => acc + val, ``);
       const result = userValue.result.join("");
+
       console.log(userValue);
       console.log(scoreArr);
       console.log(scores);
       console.log(result);
-      const url = `http://34.64.132.100:3000/api/result?type=${result}&scores=${scores}`;
+
+      const url = `http://34.64.132.100:3000/result?type=${result}&scores=${scores}`;
+      // const url = `http://34.64.132.100:3000/api/result?type=${result}&scores=${scores}`;
       const responseBody = {
         version: "2.0",
         template: {
@@ -107,11 +111,11 @@ apiRouter.post("/", function (req, res) {
   }
 });
 
-apiRouter.get("/result", function (req, res, next) {
-  const type = req.query.type;
-  const scores = req.query.scores;
-  console.log(type, scores);
-  res.send({ type, scores });
-});
+// apiRouter.get("/result", function (req, res, next) {
+//   const type = req.query.type;
+//   const scores = req.query.scores;
+//   console.log(type, scores);
+//   res.send({ type, scores });
+// });
 
 module.exports = apiRouter;

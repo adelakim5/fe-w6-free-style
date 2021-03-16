@@ -3,12 +3,9 @@ const router = express.Router();
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
-  res.render("index", { title: "Express" });
-});
-
-router.get("/web", function (req, res, next) {
-  const type = "ESTJ";
-  const scores = "90909090";
+  // console.log(`query!!!`);
+  // console.log(req.query.type);
+  // res.render("index", { title: "Express" });
 });
 
 module.exports = router;
