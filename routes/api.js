@@ -15,6 +15,7 @@ apiRouter.post("/", function (req, res) {
   const userRequest = req.body.userRequest;
   const userId = userRequest.user.id;
   const userAnswer = userRequest.utterance;
+  if (userAnswer === beginningUtterance) users = registerNewUser(users, userId, initScore);
 
   if (startUtterances.some((e) => e === userAnswer)) {
     if (!users.has(userId)) users = registerNewUser(users, userId, initScore);
@@ -29,10 +30,10 @@ apiRouter.post("/", function (req, res) {
       const scoreArr = [userValue["0"].E, userValue["0"].I, userValue["1"].S, userValue["1"].N, userValue["2"].T, userValue["2"].F, userValue["3"].J, userValue["3"].P];
       const scores = scoreArr.reduce((acc, val) => acc + val, ``);
       const result = userValue.result.join("");
-      console.log(userValue)
-      console.log(scoreArr)
-      console.log(scores)
-      console.log(result)
+      console.log(userValue);
+      console.log(scoreArr);
+      console.log(scores);
+      console.log(result);
       const url = `http://34.64.132.100:3000/api/result?type=${result}&scores=${scores}`;
       const responseBody = {
         version: "2.0",
