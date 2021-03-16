@@ -42,8 +42,9 @@ apiRouter.post("/", function (req, res) {
           ],
         },
       };
-      res.status(200).json(responseBody);
       users = deleteUser(users, userId);
+      console.log(users);
+      res.status(200).json(responseBody);
     } else {
       const responseBody = createResponseBody(questions, index);
       res.status(200).json(responseBody);
