@@ -17,7 +17,7 @@ apiRouter.post("/", function (req, res) {
   const userAnswer = userRequest.utterance;
 
   if (startUtterances.some((e) => e === userAnswer)) {
-    if (users.has(userId)) users = registerNewUser(users, userId, initScore);
+    if (!users.has(userId)) users = registerNewUser(users, userId, initScore);
     // if (userAnswer === startUtterances[0]) users = registerNewUser(users, userId, initScore);
 
     const index = users.get(userId).index;

@@ -9,7 +9,6 @@ router.get("/", function (req, res, next) {
 router.get("/web", function (req, res, next) {
   const type = "ESTJ";
   const scores = "90909090";
-  res.send({ type, scores });
 });
 
 module.exports = router;
