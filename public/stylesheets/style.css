@@ -1,8 +1,97 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.graph {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
 }
 
-a {
-  color: #00B7FF;
+.type {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.width_9 {
+  width: 90%;
+}
+
+.width_8 {
+  width: 80%;
+}
+
+.width_7 {
+  width: 70%;
+}
+
+.width_6 {
+  width: 60%;
+}
+
+.width_5 {
+  width: 50%;
+}
+
+.width_4 {
+  width: 40%;
+}
+
+.width_3 {
+  width: 30%;
+}
+
+.width_2 {
+  width: 20%;
+}
+
+.width_1 {
+  width: 10%;
+}
+
+.width_0 {
+  width: 0%;
+}
+
+.E {
+  background-color: red;
+}
+
+.I {
+  background-color: cornflowerblue;
+}
+
+.S {
+  background-color: darkgoldenrod;
+}
+
+.N {
+  background-color: darkgreen;
+}
+
+.T {
+  background-color: darksalmon;
+}
+
+.F {
+  background-color: dodgerblue;
+}
+
+.J {
+  background-color: fuchsia;
+}
+
+.P {
+  background-color: khaki;
 }
