@@ -114,6 +114,7 @@ body {
 
 .detail__head,
 .people__title {
+  width: fit-content;
   margin-top: 1em;
   border-top: 5px solid #84b1ed;
   font-size: 157%;
