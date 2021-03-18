@@ -113,6 +113,7 @@ body {
 }
 
 .type__direction {
+  border-left: 5px solid #383a3f;
   width: 100%;
   display: flex;
 }
@@ -152,8 +153,8 @@ body {
 }
 
 .I {
-  background: rgb(231, 233, 148, 1);
-  background: linear-gradient(90deg, rgba(231, 233, 148, 1) 0%, rgba(238, 174, 202, 1) 100%);
+  background: rgb(231, 233, 148);
+  background: linear-gradient(90deg, rgba(231, 233, 148, 1) 0%, rgba(195, 222, 46, 1) 100%);
 }
 
 .S {
@@ -162,8 +163,8 @@ body {
 }
 
 .N {
-  background: rgb(74, 136, 176, 1);
-  background: linear-gradient(90deg, rgba(74, 136, 176, 1) 0%, rgba(238, 174, 202, 1) 100%);
+  background: rgb(74, 136, 176);
+  background: linear-gradient(90deg, rgba(74, 136, 176, 1) 0%, rgba(175, 179, 237, 1) 100%);
 }
 
 .T {
@@ -173,7 +174,7 @@ body {
 
 .F {
   background: rgb(176, 74, 134, 1);
-  background: linear-gradient(90deg, rgba(176, 74, 134, 1) 0%, rgba(238, 174, 202, 1) 100%);
+  background: linear-gradient(90deg, rgba(176, 74, 134, 1) 0%, rgba(235, 134, 84, 1) 100%);
 }
 
 .J {
@@ -183,7 +184,7 @@ body {
 
 .P {
   background: rgb(74, 176, 170, 1);
-  background: linear-gradient(90deg, rgba(74, 176, 170, 1) 0%, rgba(238, 174, 202, 1) 100%);
+  background: linear-gradient(90deg, rgba(74, 176, 170, 1) 0%, rgba(83, 207, 54, 1) 100%);
 }
 .width_9 {
   width: 90%;
