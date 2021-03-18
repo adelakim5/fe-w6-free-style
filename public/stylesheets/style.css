@@ -248,6 +248,10 @@ body {
   border-top: 5px solid #84b1ed;
 }
 
+.people__box {
+  /* border-radius: 10px; */
+}
+
 .people__card {
   box-shadow: 5px 5px 10px #afb6c4;
   background-color: #383a3f;
@@ -256,9 +260,6 @@ body {
 .people__name {
   display: flex;
   justify-content: center;
-}
-
-.people__name {
   font-weight: bold;
   color: #fafafa;
   padding: 5px;
