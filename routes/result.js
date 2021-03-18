@@ -3,7 +3,8 @@ const router = express.Router();
 const fs = require("fs");
 const createBase = require("../views/createBase.js");
 const createResult = require("../views/createResult.js");
-const style_href = require("../utils.js");
+const { style_hrefs, srcs } = require("../utils.js");
+// const srcs = require("../utils.js")
 const createGraph = require("../views/createGraph.js");
 
 router.use(express.json());
