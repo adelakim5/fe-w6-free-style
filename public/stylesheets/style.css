@@ -284,12 +284,12 @@ body {
 button {
   all: unset;
   cursor: pointer;
-  border-radius: 2em;
+  border-radius: 17px;
   background-color: #c89ec4;
   color: #fff;
-  padding: 0.3em 2em;
   font-weight: bold;
-  font-size: 14px;
+  padding: 5px 10px;
+  font-size: 12px;
 }
 
 <<<<<<< HEAD
