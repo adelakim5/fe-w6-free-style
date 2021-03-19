@@ -47,7 +47,6 @@ const updateResult = (map, key, questionNumber, types) => {
 };
 
 const registerNewUser = (map, key) => {
-  if (map.has(key)) map = deleteUser(map, key);
   const newInitValue = JSON.parse(JSON.stringify(initScore));
   // map.set(key, newInitValue);
   map.set(key, newInitValue);
