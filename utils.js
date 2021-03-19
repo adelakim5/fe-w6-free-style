@@ -1,3 +1,4 @@
-const style_href = "/stylesheets/style.css";
+const style_hrefs = ["./stylesheets/style.css", "./stylesheets/util.css"];
+const srcs = ["./src/main.js"];
 
-module.exports = style_href;
+module.exports = { style_hrefs, srcs };

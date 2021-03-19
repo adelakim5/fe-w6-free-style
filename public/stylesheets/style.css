@@ -42,13 +42,6 @@ body {
 .type__result {
   display: flex;
   flex-direction: column;
-  background-color: #383a3f;
-  color: #fff;
-}
-
-.graph__title {
-  display: flex;
-  justify-content: center;
 }
 
 .graph__title {

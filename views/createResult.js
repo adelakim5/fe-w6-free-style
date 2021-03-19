@@ -23,12 +23,17 @@ const createDetail = (detail) => {
 };
 
 const createPeople = (people, type) => {
+  const carouselButton = /*html*/ `
+  <div class="people__button">
+    <button type="button" class="btn__prev">이전</button>
+    <button type="button" class="btn__next">다음</button>
+  </div>`;
   return (
     people.reduce((acc, val) => {
       const { name, imageUrl } = val;
       acc += `<div class="people__card"><span class="people__name">${name}</span><img class="people__image" src="${imageUrl}"></div>`;
       return acc;
-    }, `<span class="people__info"><h2 class="people__title">${type}에 해당하는 인물</h2>`) + `</span>`
+    }, `<span class="people__info"><h2 class="people__title">${type}에 해당하는 인물</h2><div class="people__wrap"><div class="people__box"><div class="people__list">`) + `</div></div>${carouselButton}</span>`
   );
 };
 
