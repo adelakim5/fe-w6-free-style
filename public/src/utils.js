@@ -5,13 +5,4 @@ const _ = {
   $$: (selector, target = document) => target.querySelectorAll(selector),
 };
 
-const state = {
-  totalWidth: (width, length) => width * (length + 2),
-  currIndex: 0,
-  currSlide: null,
-  speed: 300,
-  initSpeed: 0,
-  startNum: 0,
-};
-
-export { _, state };
+export { _ };
