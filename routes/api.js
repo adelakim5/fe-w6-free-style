@@ -1,14 +1,9 @@
 const express = require("express");
 const apiRouter = express.Router();
-<<<<<<< HEAD
 const { updateResult, types, addScore, getSelectedMsg, registerNewUser, deleteUser } = require("./chat/userManager.js");
 const { questions, answers, blockIds, startUtterances } = require("./chat/blocks.js");
 const { createResponseBody, createResultBody, createBreakMessage } = require("./chat/responses.js");
 const { eachBlocksize } = require("./chat/util.js");
-=======
-const { updateResult, types, initScore, addScore, getSelectedMsg, registerNewUser, createResponseBody } = require("./functions/addScore.js");
-const { questions, answers, breakMsg, blockIds } = require("./functions/qna.js");
->>>>>>> 07725e0 (remove deleteUser)
 let users = new Map();
 
 apiRouter.post("/", function (req, res) {
@@ -30,7 +25,6 @@ apiRouter.post("/", function (req, res) {
       const scores = scoreArr.reduce((acc, val) => acc + val, ``);
       const result = userValue.result.join("");
 
-<<<<<<< HEAD
       const resultBody = createResultBody(result, scores);
       console.log(resultBody);
       users = deleteUser(users, userId);
@@ -44,30 +38,6 @@ apiRouter.post("/", function (req, res) {
       //   console.log(result);
       //   console.log(users);
       // }
-=======
-      console.log(userValue);
-      console.log(scoreArr);
-      console.log(scores);
-      console.log(result);
-
-      const url = `http://34.64.132.100:3000/result?type=${result}&scores=${scores}`;
-      // const url = `http://34.64.132.100:3000/api/result?type=${result}&scores=${scores}`;
-      const responseBody = {
-        version: "2.0",
-        template: {
-          outputs: [
-            {
-              simpleText: {
-                text: `결과를 확인하세요!\n${url}`,
-              },
-            },
-          ],
-        },
-      };
-      console.log(users);
-
-      res.status(200).json(responseBody);
->>>>>>> 07725e0 (remove deleteUser)
     } else {
       const responseBody = createResponseBody(questions, index, blockIds, answers);
       res.status(200).json(responseBody);
