@@ -15,8 +15,6 @@ apiRouter.post("/", function (req, res) {
     if (userAnswer === startUtterances || !users.has(userId)) users = registerNewUser(users, userId);
 
     const index = users.get(userId).index;
-    console.log(index);
-    console.log(questions.length);
     // when the answer is the beginning || end signal
     if (index === questions.length) {
       // create url including user's result, then send it to chatbot as a message
@@ -26,18 +24,8 @@ apiRouter.post("/", function (req, res) {
       const result = userValue.result.join("");
 
       const resultBody = createResultBody(result, scores);
-      console.log(resultBody);
       users = deleteUser(users, userId);
       res.status(200).json(resultBody);
-      // try {
-
-      // } catch (e) {
-      //   console.log(userValue);
-      //   console.log(scoreArr);
-      //   console.log(scores);
-      //   console.log(result);
-      //   console.log(users);
-      // }
     } else {
       const responseBody = createResponseBody(questions, index, blockIds, answers);
       res.status(200).json(responseBody);
@@ -62,7 +50,6 @@ apiRouter.post("/", function (req, res) {
       users = updateResult(users, userId, totalQuestionIndex, typeArr);
       users.get(userId).totalQuestionIndex++;
       const breakMessage = createBreakMessage(blockIds, selectedMsg, startUtterances, { users, userId });
-      // ++users.get(userId).index;
       res.status(200).json(breakMessage);
     } else {
       users.get(userId).index++;
@@ -71,22 +58,5 @@ apiRouter.post("/", function (req, res) {
     }
   }
 });
-
-// const createBase = require("../views/createBase.js");
-// const createResult = require("../views/createResult.js");
-// const style_href = require("../utils.js");
-// const createGraph = require("../views/createGraph.js");
-// const fs = require("fs");
-
-// apiRouter.use(express.json());
-
-// apiRouter.get("/result", function (req, res, next) {
-//   const type = req.query.type;
-//   const scores = req.query.scores;
-//   const jsonData = JSON.parse(fs.readFileSync("./data/personalities.json"));
-//   const result = createResult(jsonData[type]);
-//   const graph = createGraph(scores);
-//   res.send(createBase(style_href, result, graph));
-// });
 
 module.exports = apiRouter;
