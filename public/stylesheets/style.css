@@ -1,8 +1,29 @@
+<<<<<<< HEAD
+=======
+@import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.jejumyeongjo * {
+  font-family: "Jeju Myeongjo", serif;
+}
+
+.notosanskr * {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+>>>>>>> 9fb94f9 (Add css)
 body {
   background-color: #fafafa;
   color: #383a3f;
 }
 
+<<<<<<< HEAD
 .title {
   font-size: 200%;
 }
@@ -40,10 +61,105 @@ body {
 .people__title,
 .graph,
 .type__result {
+=======
+.content {
+  border: 1px solid #e7e7e7;
+  background-color: #fff;
+  margin: 1.5em 1em;
+  font-family: "Noto Sans KR";
+  font-size: 15px;
+}
+
+.title,
+.detail__head,
+.people__title,
+.graph__title {
+  font-family: "GmarketSansBold";
+}
+
+.title {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 270%;
+}
+
+.full__content {
+  margin: 2em;
+}
+
+.summary__quote {
+  margin: 1.5em 0;
+  height: fit-content;
+  border-left: 3px solid #84b1ed;
+  padding: 0 1em;
+  font-size: 15px;
+  font-family: "Jeju Myeongjo";
+}
+
+.quote__author {
+  display: block;
+  margin: 1em 0;
+  font-size: 12px;
+  font-style: normal;
+  color: #afb6c4;
+}
+
+.detail {
+  margin-top: 3em;
+  width: 100%;
+
+  /* border: 1px solid blue; */
+}
+
+.detail__head,
+.people__title {
+  margin-top: 1em;
+  border-top: 5px solid #84b1ed;
+  font-size: 157%;
+  position: relative;
   display: flex;
   flex-direction: column;
 }
 
+.people__card {
+  width: 100%;
+  height: 13em;
+  overflow: hidden;
+  margin-bottom: 1em;
+  box-shadow: 5px 5px 10px #afb6c4;
+  background-color: #383a3f;
+}
+
+.people__name {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fafafa;
+}
+
+.people__image {
+  width: 100%;
+}
+
+.graph {
+  width: 100%;
+  height: 24em;
+>>>>>>> 9fb94f9 (Add css)
+  display: flex;
+  flex-direction: column;
+  background-color: #383a3f;
+  color: #fff;
+}
+
+.graph__title {
+  display: flex;
+  justify-content: center;
+}
+
+<<<<<<< HEAD
 .graph__title {
   width: 100%;
   text-align: center;
@@ -51,6 +167,11 @@ body {
 
 .type {
   margin-bottom: 2em;
+=======
+.type {
+  width: auto;
+  height: 100%;
+>>>>>>> 9fb94f9 (Add css)
   display: flex;
 }
 
@@ -58,10 +179,15 @@ body {
   border-left: 5px solid #383a3f;
   width: 100%;
   display: flex;
+<<<<<<< HEAD
+=======
+  position: relative;
+>>>>>>> 9fb94f9 (Add css)
 }
 
 .left {
   justify-content: flex-end;
+<<<<<<< HEAD
 }
 
 .left .type__result {
@@ -624,4 +750,30 @@ button:hover {
     padding: 5px;
     font-size: 12px;
   }
+=======
+}
+
+.type__result {
+  width: 100%;
+  height: 24px;
+  width: auto;
+}
+
+.type__name {
+  all: unset;
+  position: absolute;
+}
+
+.type__left {
+  left: 0;
+}
+
+.type__right {
+  right: 0;
+}
+
+.width_9 {
+  width: 90%;
+  background-color: hotpink;
+>>>>>>> 9fb94f9 (Add css)
 }
